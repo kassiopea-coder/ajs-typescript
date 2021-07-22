@@ -66,22 +66,8 @@ test('cart remove', () => {
   cart.add(item1);
   cart.add(item2);
   cart.add(item3);
-  cart.remove(1008)
+  cart.remove(1008);
   expect(cart.items).toEqual([item1, item3]);
-});
-
-test('cart remove countable', () => {
-  const cart = new Cart();
-  const item1 = new Book(1001, 'War and Piece', 'Leo Tolstoy', 2000, 1225);
-  const item2 = new MusicAlbum(1008, 'Meteora', 'Linkin Park', 900);
-  const item3 = new Gadget(555, 'Apple', 'Galaxy S10', 2500, true);
-  cart.add(item1);
-  cart.add(item2);
-  cart.add(item3);
-  cart.add(item3);
-  cart.add(item3);
-  cart.remove(555)
-  expect(cart.items).toEqual([item1, item2, item3, item3]);
 });
 
 test('cart remove once', () => {
