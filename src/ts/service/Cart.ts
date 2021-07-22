@@ -18,11 +18,7 @@ export default class Cart {
     }
 
     remove(id: number): void {
-        /*const itemIndex = this._items.findIndex((item) => item.id === id);
-        if (itemIndex != -1) {
-            this._items.splice(itemIndex, 1);
-        }*/
-        this._items.filter((item) => item.id !== id);
+        this._items = this._items.filter((item) => item.id !== id);
     }
 
     get items(): Buyable[] {

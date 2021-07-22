@@ -93,7 +93,6 @@ test('cart remove once', () => {
   cart.add(item2);
   cart.add(item3);
   cart.remove(1010);
-  cart.remove(1010);
-  cart.remove(1010);
+  expect(cart.items.length).toBe(2);
   expect(cart.items).toEqual([item1, item2]);
 });
